@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Digital Clock</title>
+	<link rel="stylesheet" type="text/css" href="diital clock.css">
+</head>
+<body>
+	<h3 id="wish"></h3>
+	<div class="hero">
+		<div class="container">
+		<div class="clock">
+		<span id="hrs">00</span>
+		<span>:</span>
+		<span id="min">00</span>
+		<span>:</span>
+		<span id="sec">00</span>
+		</div>
+	</div>
+	</div>
+
+<script>
+
+	let hrs = document.getElementById("hrs");   
+	let min = document.getElementById("min");   
+	let sec = document.getElementById("sec");
+	let wish =document.getElementById
+
+setInterval(()=>{
+
+
+	let currentTime = new Date();
+
+	hrs.innerHTML = (currentTime.getHours()<10?"0":" " )+ currentTime.getHours();
+	min.innerHTML = (currentTime.getMinutes()<10?"0":" ") + currentTime.getMinutes();   
+	sec.innerHTML =  (currentTime.getSeconds()<10?"0":" ") + currentTime.getSeconds();
+
+
+ hrs.innerHTML = (hours < 10 ? "0" : "") + hours;
+            min.innerHTML = (minutes < 10 ? "0" : "") + minutes;
+            sec.innerHTML = (seconds < 10 ? "0" : "") + seconds;
+
+             // Set greetings based on the time of the day
+            if (hours < 12) {
+                wish.innerHTML = "Good Morning";
+            } else if (hours < 17) {
+                wish.innerHTML = "Good Afternoon";
+            } else if (hours < 21) {
+                wish.innerHTML = "Good Evening";
+            } else {
+                wish.innerHTML = "Good Night";
+            }
+        }, 1000);
+
+
+	
+
+</script>
+
+</body>
+</html>
